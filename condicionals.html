@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+        var enter = 19
+
+        //si enter es mes gran que 20 escriure "mes gran de 20 a la pantalla"
+        // sino escriure " mens de 20"
+
+        if(enter > 20){
+            console.log(" Es mes gran de 20")
+        }else{
+            console.log("Es mes petit  de 20")
+        }
+
+        var esMesGranDe20 = enter > 20
+
+        if(esMesGranDe20){
+            console.log("Mes gran de 20")
+        }else {
+            console.log("Mes petit de 20")
+        }
+
+
+        // Exercici, donada una temperatura corporal,
+        //escriure per pantalla
+        //menys de  graus escriure "perill"
+        // entre 35 i 36.5 escriure " no te febre"
+        // entre 36.5 i 38 escruire "te forca febra"
+        // Mes de 38 "te molt febra"
+
+
+           var temperaturaCorp = 35
+
+        if (temperaturaCorp < 35){
+            console.log(temperaturaCorp, "es perill")
+        } else if(temperaturaCorp < 36.5 ){
+            console.log("no te febra")
+        } else if( temperaturaCorp < 38 ){
+            console.log( "te febra")
+        }else{
+            console.log("te molta febra")
+        }
+
+        // Fer una funcio calcularFebra amb un parametre
+        //d'entrada (la febra) i que imprimeix a la console 
+        // els textes anteriors.
+        
+        function calcularFebra(laFebra){
+            if (laFebra < 35){
+            console.log(laFebra, "es perill")
+        } else if(laFebra < 36.5 ){
+            console.log("no te febra")
+        } else if( laFebra < 38 ){
+            console.log( "te febra")
+        }else{
+            console.log("te molta febra")
+        }
+        }
+        calcularFebra(30)
+        calcularFebra(35.7)
+        calcularFebra(37.8)
+        calcularFebra(40)
+        console.log(calcularFebra())
+
+        var pacients = [34.5, 42.3, 39.0, 36.7]
+        for (var posicio=0; posicio<pacients.length;posicio++){
+            // Agafem el valor de la posicio actual
+           
+            var febraPacient =pacients[posicio]
+            console.log(
+                "La febra del pacient "
+                + posicio 
+                + " es " 
+                + febraPacient
+            )
+            calcularFebra(febraPacient)
+        }
+        console.log("apunt del forEach")
+        // array (pacients)
+        pacients.forEach(calcularFebra)
+
+        console.clear()
+        pacients.forEach(
+            function(laValor,posicio,el_array){
+                calcularFebra(laValor)
+            }
+        )
+    
+        var noms =[]
+        noms.push("Jordi")
+        noms.push("Eva")
+        noms.push("Daniel")
+        noms.push(3.25)
+        noms.push("Pere")
+        noms.push("Laura")
+
+        // Escriure quants caracters te cada nom
+        // i el nom en un for i despres en un forEach
+
+
+        console.log(noms)
+        for (
+            var posicioDelNom = 0; 
+                posicioDelNom <noms.length; 
+                posicioDelNom++
+        ){
+            // Agafem el valor
+            var nomActual = noms[posicioDelNom]
+            if(
+                typeof(nomActual) =="string"){
+                // Contem caracters
+                var numbreDeCaracters =nomActual.length
+                            console.log(
+                            "El nom "
+                            + nomActual
+                            + " te "
+                            + numbreDeCaracters
+                            + " caracters" 
+                            )
+            } else {
+                console.log(" Es altra cosa")
+            }
+           
+        }
+            console.clear()
+
+            noms.forEach((el)=>{
+            if(typeof el=="string"){
+                console.log("El nom "+ el +" te " + el.length + " caracters.")
+            }}
+            )
+
+       console.clear()     
+        noms.forEach((el,pos,arr)=>{
+            console.log(el)
+        })
+            
+        console.clear()
+
+        for (
+            var posicio = 0; 
+                posicio < noms.length; 
+                posicio++
+        ){
+            var el =noms[posicio]
+            console.log(
+                "l'element es "
+                + el 
+                + " te la posicio  " 
+                + posicio
+                + " i l'array te "
+                + noms.length
+                +" elements"
+        )}
+        
+        
+        var excel = [
+            [10,12,14,1,20,3],
+            [2,1,19,11,2,32],
+            [40,12,200,2,42,31],
+        ]
+        var sumatori = 0
+        for(var fila = 0; fila < noms.length; fila++){
+            // Recuperem l'element actual
+            var el = excel[fila]
+            for (var columna = 0; columna < el.length; columna++){
+                var valor = el[columna]
+                sumatori = sumatori + valor
+            }
+        }
+        console.log(sumatori)
+
+
+        var sumatori2 = 0
+        excel.forEach(columna=>{
+            fila.forEach(columna=>{
+            sumatori2 += columna })
+            })
+
+          console.log(sumatori2)  
+
+          console.clear()
+
+          var pacients2=[]
+
+            pacients2.push({
+                nom: "jordi",
+                febre: 35
+            })
+            pacients2.push({nom: "Laura",febre: 36.5})
+            pacients2.push({nom: "Eva",febre: 39.5})
+
+            console.log(patients2)
+
+            pacients2.foreach((pacients,i,pacients)=>{
+                console.log("Estem mirant el pacient", pacient.nom)
+                console.log("El pacient te la febre a ", pacient.febre)
+                console.log(" Hi ha ", pacients.length, " pacients.")
+
+                var seguentPacient= pacients[i+1]
+                if (seguentPacient){
+                    console.log(" El seguent pacient es ", seguentPacient.nom)
+                }
+            })
+
+</script>
+</html>
