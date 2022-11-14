@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Variable</h1>
+</body>
+<script>
+        // crear dues variables que tenguin cada un numero enter defirent
+        var enter1 = 10
+        var enter2 = 20
+
+        // Dues variables que tinguin dos decimals diferents
+        var decimal1 =3.45
+        var decimal2 =5.6
+
+        // Fer servir el console log per veure la suma 
+        // del parell de variables
+        var sumaEnter = enter1 + enter2
+        console.log("els enters",sumaEnter)
+
+        console.log("els decimals sumen", decimal1 +decimal2)
+
+        //Fer una funcio 
+        // + 1 parametre d'entrada o argument
+        // Ens diu de quin tipus es i imprimeix el valor de l'argument
+
+        function tipusDeVariable(entrada){
+            console.log(
+                "La variable d'engrada es del tipus "
+                   + typeof(entrada) 
+                   + " i te el valor " 
+                   + entrada 
+
+            )
+            }
+        tipusDeVariable("Hola")
+        tipusDeVariable(enter1)
+        tipusDeVariable(decimal1)
+        tipusDeVariable()
+        tipusDeVariable({})
+        tipusDeVariable([])
+
+        // Fer 4 funcios , la de la suma, restar, multiplicar i dividir,
+        // i probar-les
+        var a = 20
+        var b = 5
+
+        function suma(a,b){
+            return a + b
+        }
+        
+        function resta(a,b){
+            return a - b
+        }
+
+        function multiplicar(a,b){
+            return a * b
+        }
+        function dividir(a,b){
+            return a / b
+        }
+        var suma1 = a + b 
+        console.log("suma ", suma1)
+        
+        var laResta = resta(a, b)
+        console.log("resta ", laResta)
+
+        var resultat = multiplicar(enter1,b)
+        console.log(resultat)
+
+        console.log(dividir(a,b))
+
+        function suma3(a,b,c){
+            return a + b + c
+        }
+
+        console.log(suma3(12,11,13))
+
+        var resultat = suma(suma(12,11),13)
+        console.log(resultat)
+
+
+</script>
+</html>
