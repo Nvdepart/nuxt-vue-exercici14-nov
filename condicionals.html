@@ -201,9 +201,9 @@
 
             console.log(patients2)
 
-            pacients2.foreach((pacients,i,pacients)=>{
-                console.log("Estem mirant el pacient", pacient.nom)
-                console.log("El pacient te la febre a ", pacient.febre)
+            pacients2.forEach((pacients,i,pacient)=>{
+                console.log("Estem mirant el pacient", pacients.nom)
+                console.log("El pacient te la febre a ", pacients.febre)
                 console.log(" Hi ha ", pacients.length, " pacients.")
 
                 var seguentPacient= pacients[i+1]
