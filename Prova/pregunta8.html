@@ -1,0 +1,38 @@
+<!--
+        pregunta 8
+        1. Escruire per consola la suma dels valors de l'array guanys
+
+
+ -->
+
+ <script>
+    var guanys =[1500,1500,2000,1500,900]
+    var acumulat = 0
+    for (var i=0; i<guanys.length; i++){
+        // Acumular en una variable cada un dels elements
+        var elementActual = guanys[i]
+        acumulat = acumulat + elementActual
+    }
+    
+    console.log("El total es ",acumulat)
+
+
+    var acumulatForEach = 0
+    guanys.forEach(function(el){
+            acumulatForEach += el
+    })
+    
+    console.log("El acumulat es ", acumulatForEach )
+    // Fem una funcio que tingui un parametre 
+    // d'entrada (array de numeros) 
+    // i ens torna la suma de tots els numeros de l'array 
+
+        function calcularElTotal(valors) {
+            var acumulat = 0 
+            valors.forEach((el)=>{
+                acumulat += el
+            })
+        }
+                var total = calcularElTotal([12,21,100])
+                console.log(total)
+ </script>

@@ -1,0 +1,138 @@
+<script>
+        var usuari={}
+
+        usuari.nom = "Jordi"
+        usuari.cognome = "Gasau"
+        // Tot l'usuari
+        console.log(usuari)
+        // Nomes el nom
+        console.log(usuari.nom)
+        // tambe el nom
+        console.log(usuari["nom"])
+
+        usuari['nom'] = "Mar"
+
+        var clau = "nom"
+        console.log(usuari[clau])
+
+        var claus = Object.keys(usuari)
+        var valors = Object.values(usuari)
+        console.log(claus)
+        console.log(valors)
+
+
+        claus.forEach(clau =>{
+            var valor = usuari[clau]
+            console.log(valor)
+        })
+
+            usuari.diguesHola = ()=>{console.log("Hola")}
+            usuari.digueAdeu = function(){
+                console.log("Adeu")
+            }
+
+            usuari.diguesHola()
+            usuari.digueAdeu()
+
+
+            //------ 
+             var web = {
+                seoPaginaPrincipal: {},
+                pagines :[],
+                footer :[]
+             }
+
+             var recepta = {
+                nom :"Truita",
+                passos :[
+                    {
+                        text : "Preparar ingredients",
+                        temps : 20
+                    },
+                    {
+                        text : "Coure ingredients",
+                        temps: 50
+                    }
+                ],
+                calcularTemps : function() {
+                    var acumulat = 0
+                    this.passos.forEach(
+                        function(el){
+                            acumulat += el.temps
+                        })
+                        return acumulat
+                }
+             }
+                console.log(
+                    "El temps total de la recepta es",
+                    recepta.calcularTemps()
+                )
+
+
+            var ciutat = {
+                nom : "Girona",
+                temperatures : [21,20,19,21,26,25,24,22,19,17,15],
+                temperaturaMitjana(){
+                    // Recorer l'array i acumular en una varriable el total 
+                    
+                    
+                    
+                    var acumulat = 0 
+                    var nombreDeElement = 0
+                    this.temperatures.forEach((el)=>{
+                    // (suma de tots els elements)
+                    acumulat += el
+                    // el nombre total d'element
+                    nombreDeElement++
+                    
+            })
+            // retornar es la suma/nombre total d'element
+                return acumulat/nombreDeElement
+        }
+            }
+            
+            // " A la ciutat de Girona hi ha una temperatura mitjana de X"
+
+            var temperaturaMitjana = ciutat.temperaturaMitjana()
+            var nombreDeLaCiutat = ciutat.nom
+
+            console.log(
+                "A la ciutat de "
+                + nombreDeLaCiutat
+                + " hi ha una temperatura mitjana de "
+                + temperaturaMitjana
+                + " graus"
+            )
+
+            var carpeta = {
+        nom:"projectes",
+        elements:[
+            {nom:"dia-18",tipus:"carpeta",arxius:12,gb:20},
+            {nom:"dia-19",tipus:"carpeta",arxius:2,gb:21},
+            {nom:"dia-20",tipus:"carpeta",arxius:32,gb:1},
+            {nom:"dia-21",tipus:"carpeta",arxius:7,gb:10},
+            {nom:"dia-22",tipus:"carpeta",arxius:219,gb:7},
+        ],
+        metodes:{
+            nombreDeCarpetes(){
+                console.log(this)
+                return this.elements.length
+            },
+            nombreArxius(){
+                console.log("Estic dins de nombre arxius")
+            },
+            tamanyTotalArxius(){
+
+            },
+            tamanyMitjaArxiu(){
+                return this.tamanyTotalArxius()/this.nombreArxius()
+            }
+            
+        }
+        
+    }
+
+    console.log(carpeta.nombreDeCarpetes())
+    carpeta.nombreArxius()
+    
+</script>

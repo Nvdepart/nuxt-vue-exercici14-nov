@@ -1,0 +1,48 @@
+<!-- 
+
+    Pregunta 7
+    1. Escruire per consola la posicio de l'element "renault"
+    de l'array de cotxes
+    
+-->
+
+
+<script>
+    var cotxes= ["BMW", "AUDI","CITROEN","Renault","Seat"]
+    for (var i=0; i< cotxes.length; i++){
+       var cotxe = cotxes[i]
+        if (cotxe=="Renault"){
+            console.log("La posicio de Renault es ", i)
+        }
+    }
+
+    console.log("------")
+
+    cotxes.forEach(
+        function(cotxe,posicio){
+            if(cotxe=="Renault"){
+                console.log("La posicio del cotxe Renault es ", posicio)
+            }
+        }
+    )
+
+    console.log("-----")
+
+    cotxes.forEach(
+        (cotxe,posicio) =>{
+            if(cotxe=="Renault"){
+                console.log("La posicio del cotxe Renault es ", posicio)
+            }
+        }
+
+    )
+
+
+    console.log("-----")
+
+    var imprimeixPosicioRenault = (cotxe, posicio) =>{
+        if(cotxe=="Renault"){
+            
+        }
+    }
+</script>

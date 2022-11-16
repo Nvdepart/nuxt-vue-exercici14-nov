@@ -1,0 +1,40 @@
+<!-- 
+        Pregunta 5
+            1. Fer una funcio amb un parametre d'entrada (text)
+            2. Fer que la funcio torni el nombre de caracters d'aquesta 
+            cadena de text.
+            3. Mostrar-ho per pantalla en varis exemples.
+-->
+
+<script>
+        function nombreCaracter(text) {
+            return text.length;
+        }
+        
+        var x = nombreCaracter("LA CADENA DE TEXT")
+        console.log(x)
+        console.log(nombreCaracter("hola"))
+        console.log(nombreCaracter("❤️"))
+        console.log("el nombre de caracters es ",nombreCaracter(" Hola soy en Hicham"))
+
+
+        var a = [
+            "We're up all night 'til the sun",
+            "We're up all night to get some",
+            "We're up all night for good fun",
+            "We're up all night to get lucky"
+            ];
+
+            // Sans la syntaxe des fonctions fléchées
+        var a2 = a.map(function (s) { return s.length }); 
+            // [31, 30, 31, 31]
+
+            // Avec, on a quelque chose de plus concis
+        var a3 = a.map( s => s.length);
+            // [31, 30, 31, 31]
+            console.log(a2);
+            console.log(a3);
+
+</script>
+
+
